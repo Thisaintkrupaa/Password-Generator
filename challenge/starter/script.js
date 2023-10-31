@@ -122,18 +122,21 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-   const randomIndex = Math.floor(Math.random() * arr.length);
+  const randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex];
 
 }
 
 // Function to generate password with user input
+
 function generatePassword() {
-  const passwordLength = parseInt(document.getElementById('password-length').value);
-  const includeLowercase = document.getElementById('include-lowercase').checked;
-  const includeUppercase = document.getElementById('include-uppercase').checked;
-  const includeNumbers = document.getElementById('include-numbers').checked;
-  const includeSpecial = document.getElementById('include-special').checked;
+  const passwordOptions = getPasswordOptions();
+  
+  if (!passwordOptions) {
+      return '';
+    }
+  
+    const { passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSpecial } = passwordOptions;
 
   let validChars = '';
 
@@ -146,7 +149,7 @@ function generatePassword() {
     alert('Please select at least one character type.');
     return '';
   }
-  
+
   let password = '';
 
   for (let i = 0; i < passwordLength; i++) {
@@ -155,6 +158,7 @@ function generatePassword() {
 
   return password;
 }
+
 
 // Toggle password options visibility
 function toggleOptions() {
