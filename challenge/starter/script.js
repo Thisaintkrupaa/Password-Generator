@@ -90,9 +90,34 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+    // Access the form and its elements
+  const form = document.getElementById('password-options-form');
+  const passwordLength = parseInt(form.elements['password-length'].value);
+  const includeLowercase = form.elements['include-lowercase'].checked;
+  const includeUppercase = form.elements['include-uppercase'].checked;
+  const includeNumbers = form.elements['include-numbers'].checked;
+  const includeSpecial = form.elements['include-special'].checked;
+  const errorMessage = document.getElementById('error-message');
+}
+// Check for valid password options
+  if (
+    isNaN(passwordLength) ||
+    passwordLength < 8 ||
+    passwordLength > 128 ||
+    (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecial)
+  ) {
+    alert('Please select valid password options.');
+    return null;
+  }
 
-
-
+  // Return an object with password options
+  return {
+    passwordLength,
+    includeLowercase,
+    includeUppercase,
+    includeNumbers,
+    includeSpecial,
+  };
 }
 
 // Function for getting a random element from an array
