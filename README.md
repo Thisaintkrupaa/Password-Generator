@@ -35,6 +35,8 @@ This way, users can quickly understand how to use the password generator to crea
 
 # Installation 
 
+https://thisaintkrupaa.github.io/Password-Generator/
+
 
 
 
