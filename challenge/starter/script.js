@@ -120,6 +120,15 @@ function generatePassword() {
     return '';
   }
   
+  let password = '';
+
+  for (let i = 0; i < passwordLength; i++) {
+    password += getRandom(validChars);
+  }
+
+  return password;
+}
+
 
 
 
