@@ -131,7 +131,11 @@ function generatePassword() {
   return password;
 }
 
-
+// Toggle password options visibility
+function toggleOptions() {
+  var optionsDiv = document.querySelector('.options');
+  optionsDiv.style.display = optionsDiv.style.display === 'none' ? 'block' : 'none';
+}
 
 
 // Get references to the #generate element
