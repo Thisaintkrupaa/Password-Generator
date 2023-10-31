@@ -37,6 +37,4 @@
 
 # Credit
 
-
-
-I 
+Krupa Dulobo
