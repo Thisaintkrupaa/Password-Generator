@@ -5,31 +5,13 @@ created a password generator web application that allows users to generate secur
 
 
 
-
-
-
-
-# Installation 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Password-GeneratorScreenshot
 
 
 
 
+
+# Installation 
 
 
 
